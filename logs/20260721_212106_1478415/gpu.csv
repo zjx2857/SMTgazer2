@@ -1,0 +1,2 @@
+timestamp, index, name, utilization.gpu [%], memory.used [MiB], power.draw [W]
+2026/07/21 21:21:16.309, 0, NVIDIA GeForce RTX 4060 Ti, 4 %, 1365 MiB, 36.61 W

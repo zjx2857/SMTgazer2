@@ -1,0 +1,16 @@
+[INFO] SMTgazer2 action=prepare run_id=20260721_211911_2
+[INFO] Repository: /home/xiuiuiu/code/SMTgazer2
+[INFO] Log: /home/xiuiuiu/code/SMTgazer2/logs/20260721_211911_2/run.log
+[OK] Disk space check passed
+[INFO] Detected WSL2
+[INFO] LightGBM backend: cuda
+[INFO] CPU preparation mode: skipping GPU driver and runtime checks
+[OK] Conda: /home/xiuiuiu/miniconda3/bin/conda
+[OK] Python: Python 3.10.20
+[OK] CUDA 12.1 build toolkit is present
+[OK] Pinned Python runtime is already installed
+[OK] Prepared LightGBM CUDA build is already installed
+No broken requirements found.
+[OK] Environment snapshot saved in /home/xiuiuiu/code/SMTgazer2/logs/20260721_211911_2
+[OK] CPU-side environment preparation completed
+[INFO] Submit a GPU job that runs: ./run_smtgazer.sh run --dataset DATASET --lightgbm-backend cuda

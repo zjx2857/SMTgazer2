@@ -1,0 +1,7 @@
+[INFO] SMTgazer2 action=check run_id=20260721_173504_2
+[INFO] Repository: /home/xiuiuiu/code/SMTgazer2
+[INFO] Log: /home/xiuiuiu/code/SMTgazer2/logs/20260721_173504_2/run.log
+[OK] Disk space check passed
+[INFO] Detected WSL2
+[INFO] LightGBM backend: cuda
+[ERROR] WSL GPU device /dev/dxg is not visible. Run outside this sandbox/container or enable GPU passthrough

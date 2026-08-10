@@ -1,0 +1,26 @@
+[INFO] SMTgazer2 action=check run_id=20260716_011413_1854091
+[INFO] Repository: /home/xiuiuiu/code/SMTgazer2
+[INFO] Log: /home/xiuiuiu/code/SMTgazer2/logs/20260716_011413_1854091/run.log
+[OK] Disk space check passed
+[INFO] Detected WSL2
+[INFO] LightGBM backend: cuda
+[OK] NVIDIA GPU (name, total MiB, used MiB, utilization %): NVIDIA GeForce RTX 4060 Ti, 8188, 1662, 37
+[OK] Conda: /home/xiuiuiu/miniconda3/bin/conda
+[OK] Python: Python 3.10.20
+[OK] CUDA 12.1 build toolkit is present
+[OK] Pinned Python runtime is already installed
+[OK] LightGBM CUDA fit/predict passed
+No broken requirements found.
+[OK] Environment snapshot saved in /home/xiuiuiu/code/SMTgazer2/logs/20260716_011413_1854091
+[FAIL] GNN device must be CUDA for server experiments: cpu
+[OK] Python 3.10.20
+[OK] numpy 1.26.4
+[OK] torch 2.2.0+cu121
+[OK] torch-geometric 2.5.3
+[OK] pySMT 0.9.6
+[OK] LightGBM 4.5.0
+[OK] ConfigSpace 1.2.1
+[OK] local SMAC /home/xiuiuiu/code/SMTgazer2/SMTgazer/smac/smac/__init__.py
+[OK] pySMT node feature size 67
+[ERROR] stage=strict GPU smoke test line=524 exit=1 command=\(\ cd\ \"\$SMT_ROOT\"\;\ \"\$PYTHON\"\ -B\ check_server.py\ --torch-device\ \"\$TORCH_DEVICE\"\ --lightgbm-device-type\ \"\$LIGHTGBM_BACKEND\"\ \)
+[ERROR] Full log: /home/xiuiuiu/code/SMTgazer2/logs/20260716_011413_1854091/run.log

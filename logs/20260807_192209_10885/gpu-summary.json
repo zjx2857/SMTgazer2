@@ -1,0 +1,56 @@
+{
+  "source": "/root/autodl-tmp/SMTgazer2/logs/20260807_192209_10885/gpu.csv",
+  "overall": {
+    "samples": 1746,
+    "duration_seconds": 1821.267,
+    "gpu_util_avg_pct": 0.0,
+    "gpu_util_p50_pct": 0.0,
+    "gpu_util_p95_pct": 0.0,
+    "gpu_util_max_pct": 0.0,
+    "gpu_active_samples_pct": 0.0,
+    "memory_util_avg_pct": 0.0,
+    "memory_used_avg_mib": 0.0,
+    "memory_used_peak_mib": 0.0,
+    "power_draw_avg_w": 25.89337342497136,
+    "power_draw_peak_w": 39.92,
+    "estimated_energy_wh": 13.099590083333359,
+    "temperature_peak_c": 31.0,
+    "sm_clock_avg_mhz": 159.00687285223367
+  },
+  "phases": {
+    "orchestration": {
+      "samples": 1,
+      "duration_seconds": 0.0,
+      "gpu_util_avg_pct": 0.0,
+      "gpu_util_p50_pct": 0.0,
+      "gpu_util_p95_pct": 0.0,
+      "gpu_util_max_pct": 0.0,
+      "gpu_active_samples_pct": 0.0,
+      "memory_util_avg_pct": 0.0,
+      "memory_used_avg_mib": 0.0,
+      "memory_used_peak_mib": 0.0,
+      "power_draw_avg_w": 39.92,
+      "power_draw_peak_w": 39.92,
+      "estimated_energy_wh": 0.0,
+      "temperature_peak_c": 31.0,
+      "sm_clock_avg_mhz": 1230.0
+    },
+    "sibyl_graph_build": {
+      "samples": 1745,
+      "duration_seconds": 1820.228,
+      "gpu_util_avg_pct": 0.0,
+      "gpu_util_p50_pct": 0.0,
+      "gpu_util_p95_pct": 0.0,
+      "gpu_util_max_pct": 0.0,
+      "gpu_active_samples_pct": 0.0,
+      "memory_util_avg_pct": 0.0,
+      "memory_used_avg_mib": 0.0,
+      "memory_used_peak_mib": 0.0,
+      "power_draw_avg_w": 25.88533524355301,
+      "power_draw_peak_w": 39.82,
+      "estimated_energy_wh": 13.088068727777804,
+      "temperature_peak_c": 31.0,
+      "sm_clock_avg_mhz": 158.39312320916906
+    }
+  }
+}

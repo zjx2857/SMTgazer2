@@ -1,0 +1,36 @@
+[INFO] SMTgazer2 action=check run_id=20260716_010533_1841211
+[INFO] Repository: /home/xiuiuiu/code/SMTgazer2
+[INFO] Log: /home/xiuiuiu/code/SMTgazer2/logs/20260716_010533_1841211/run.log
+[OK] Disk space check passed
+[INFO] Detected WSL2
+[INFO] LightGBM backend: cuda
+[OK] NVIDIA GPU (name, total MiB, used MiB, utilization %): NVIDIA GeForce RTX 4060 Ti, 8188, 1662, 34
+[OK] Conda: /home/xiuiuiu/miniconda3/bin/conda
+[OK] Python: Python 3.10.20
+[OK] CUDA 12.1 build toolkit is present
+[OK] Pinned Python runtime is already installed
+[OK] LightGBM CUDA fit/predict passed
+No broken requirements found.
+[OK] Environment snapshot saved in /home/xiuiuiu/code/SMTgazer2/logs/20260716_010533_1841211
+[OK] Python 3.10.20
+[OK] numpy 1.26.4
+[OK] torch 2.2.0+cu121
+[OK] torch-geometric 2.5.3
+[OK] pySMT 0.9.6
+[OK] LightGBM 4.5.0
+[OK] ConfigSpace 1.2.1
+[OK] local SMAC /home/xiuiuiu/code/SMTgazer2/SMTgazer/smac/smac/__init__.py
+[OK] pySMT node feature size 67
+[OK] PyTorch CUDA device: NVIDIA GeForce RTX 4060 Ti
+[LightGBM] [Warning] min_data_in_leaf is set=1, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=1
+[LightGBM] [Warning] Using sparse features with CUDA is currently not supported.
+[LightGBM] [Warning] min_data_in_leaf is set=1, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=1
+[LightGBM] [Info] Total Bins 252
+[LightGBM] [Info] Number of data points in the train set: 512, number of used features: 4
+[LightGBM] [Info] Start training from score 0.513112
+[LightGBM] [Warning] min_data_in_leaf is set=1, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=1
+[OK] LightGBM CUDA GPU fit/predict
+[OK] SMAC LightGBM+RandomForest hybrid fit/predict
+[OK] Sibyl 201-value GNN embedding
+[OK] Server is ready for experiments
+[OK] All environment and GPU checks passed

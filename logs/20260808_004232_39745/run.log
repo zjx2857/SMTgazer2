@@ -1,0 +1,794 @@
+[INFO] SMTgazer2 action=run run_id=20260808_004232_39745
+[INFO] Repository: /root/autodl-tmp/SMTgazer2
+[INFO] Log: /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/run.log
+[INFO] Experiment: dataset=SyGuS stage=full seeds=0
+[INFO] Query root: /root/autodl-tmp/SMTgazer2/sibyl/data/SyGuS
+[INFO] Checkpoint: 
+[OK] Disk space check passed
+[INFO] LightGBM backend: cuda
+[OK] NVIDIA GPU (name, total MiB, used MiB, utilization %): Tesla V100-PCIE-32GB, 32768, 0, 0
+[OK] Conda: /root/miniconda3/bin/conda
+[OK] Python: Python 3.10.20
+[OK] CUDA 12.1 build toolkit is present
+[OK] Pinned Python runtime is already installed
+[OK] LightGBM CUDA fit/predict passed
+No broken requirements found.
+[OK] Environment snapshot saved in /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745
+[OK] Python 3.10.20
+[OK] numpy 1.26.4
+[OK] torch 2.2.0+cu121
+[OK] torch-geometric 2.5.3
+[OK] pySMT 0.9.6
+[OK] pyclustering 0.10.1.2
+[OK] LightGBM 4.5.0
+[OK] ConfigSpace 1.2.1
+[OK] local SMAC /root/autodl-tmp/SMTgazer2/SMTgazer/smac/smac/__init__.py
+[OK] pySMT node feature size 67
+[OK] PyTorch CUDA device: Tesla V100-PCIE-32GB
+[LightGBM] [Warning] min_data_in_leaf is set=1, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=1
+[LightGBM] [Warning] Using sparse features with CUDA is currently not supported.
+[LightGBM] [Warning] min_data_in_leaf is set=1, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=1
+[LightGBM] [Info] Total Bins 252
+[LightGBM] [Info] Number of data points in the train set: 512, number of used features: 4
+[LightGBM] [Info] Start training from score 0.513112
+[LightGBM] [Warning] min_data_in_leaf is set=1, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=1
+[OK] LightGBM CUDA GPU fit/predict
+[OK] SMAC LightGBM+RandomForest hybrid fit/predict
+[OK] pyclustering X-means fit
+[OK] Sibyl 201-value GNN embedding
+[OK] Server is ready for experiments
+[INFO] Continuous GPU monitor: /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/gpu.csv
+[WARN] --overwrite is active; canonical feature/result files are not backed up
++ /root/autodl-tmp/SMTgazer2/.venv/bin/python -B /root/autodl-tmp/SMTgazer2/SMTgazer/run_experiment.py --dataset SyGuS --device cuda:0 --overwrite --allow-partial-features --query-root /root/autodl-tmp/SMTgazer2/sibyl/data/SyGuS --sibyl-root /root/autodl-tmp/SMTgazer2/sibyl --train-sibyl --gnn-epochs 25 --gnn-batch-size 8 --gnn-workers 4 --graph-workers 6 --feature-batch-size 8 --gnn-seed 0 --stage features --seeds 0 
+[PHASE] sibyl_graph_build
++ /root/autodl-tmp/SMTgazer2/.venv/bin/python -u /root/autodl-tmp/SMTgazer2/sibyl/prepare_graph_cache.py --query-root /root/autodl-tmp/SMTgazer2/sibyl/data/SyGuS --labels /root/autodl-tmp/SMTgazer2/sibyl/data/SyGuS_GNN_Labels.json --output-dir /root/autodl-tmp/SMTgazer2/.cache/sibyl_graphs/SyGuS --splits train test --workers 6
+[GRAPH] 999/99909 built=0 cached=999 failed=0 rate=3343.99/s
+[GRAPH] 1998/99909 built=0 cached=1998 failed=0 rate=3688.13/s
+[GRAPH] 2997/99909 built=0 cached=2997 failed=0 rate=3859.32/s
+[GRAPH] 3996/99909 built=0 cached=3996 failed=0 rate=4018.09/s
+[GRAPH] 4995/99909 built=0 cached=4995 failed=0 rate=4078.81/s
+[GRAPH] 5994/99909 built=0 cached=5994 failed=0 rate=4088.74/s
+[GRAPH] 6993/99909 built=0 cached=6993 failed=0 rate=4047.09/s
+[GRAPH] 7992/99909 built=0 cached=7992 failed=0 rate=4068.73/s
+[GRAPH] 8991/99909 built=0 cached=8991 failed=0 rate=4102.34/s
+[GRAPH] 9990/99909 built=0 cached=9990 failed=0 rate=4131.84/s
+[GRAPH] 10989/99909 built=0 cached=10989 failed=0 rate=4103.03/s
+[GRAPH] 11988/99909 built=1 cached=11987 failed=0 rate=4101.41/s
+[GRAPH] 12987/99909 built=1 cached=12986 failed=0 rate=4110.93/s
+[GRAPH] 13986/99909 built=1 cached=13985 failed=0 rate=4119.97/s
+[GRAPH] 14985/99909 built=1 cached=14984 failed=0 rate=4128.69/s
+[GRAPH] 15984/99909 built=1 cached=15983 failed=0 rate=4144.02/s
+[GRAPH] 16983/99909 built=1 cached=16982 failed=0 rate=4157.46/s
+[GRAPH] 17982/99909 built=1 cached=17981 failed=0 rate=4158.84/s
+[GRAPH] 18981/99909 built=1 cached=18980 failed=0 rate=4170.15/s
+[GRAPH] 19980/99909 built=1 cached=19979 failed=0 rate=4145.59/s
+[GRAPH] 20979/99909 built=1 cached=20978 failed=0 rate=4138.46/s
+[GRAPH] 21978/99909 built=1 cached=21977 failed=0 rate=4149.59/s
+[GRAPH] 22977/99909 built=1 cached=22976 failed=0 rate=4143.09/s
+[GRAPH] 23976/99909 built=1 cached=23975 failed=0 rate=4157.61/s
+[GRAPH] 24975/99909 built=1 cached=24974 failed=0 rate=4170.21/s
+[GRAPH] 25974/99909 built=1 cached=25973 failed=0 rate=4177.89/s
+[GRAPH] 26973/99909 built=1 cached=26972 failed=0 rate=4184.69/s
+[GRAPH] 27972/99909 built=1 cached=27971 failed=0 rate=4187.27/s
+[GRAPH] 28971/99909 built=2 cached=28969 failed=0 rate=4158.42/s
+[GRAPH] 29970/99909 built=2 cached=29968 failed=0 rate=4167.66/s
+[GRAPH] 30969/99909 built=2 cached=30967 failed=0 rate=4178.72/s
+[GRAPH] 31968/99909 built=2 cached=31966 failed=0 rate=4189.60/s
+[GRAPH] 32967/99909 built=2 cached=32965 failed=0 rate=4190.92/s
+[GRAPH] 33966/99909 built=2 cached=33964 failed=0 rate=4185.90/s
+[GRAPH] 34965/99909 built=3 cached=34962 failed=0 rate=4182.51/s
+[GRAPH] 35964/99909 built=3 cached=35961 failed=0 rate=4163.34/s
+[GRAPH] 36963/99909 built=3 cached=36960 failed=0 rate=4165.86/s
+[GRAPH] 37962/99909 built=4 cached=37958 failed=0 rate=4174.53/s
+[GRAPH] 38961/99909 built=4 cached=38957 failed=0 rate=4181.16/s
+[GRAPH] 39960/99909 built=4 cached=39956 failed=0 rate=4186.50/s
+[GRAPH] 40959/99909 built=4 cached=40955 failed=0 rate=4185.70/s
+[GRAPH] 41958/99909 built=4 cached=41954 failed=0 rate=4184.78/s
+[GRAPH] 42957/99909 built=4 cached=42953 failed=0 rate=4184.50/s
+[GRAPH] 43956/99909 built=4 cached=43952 failed=0 rate=4187.28/s
+[GRAPH] 44955/99909 built=4 cached=44951 failed=0 rate=4189.44/s
+[GRAPH] 45954/99909 built=4 cached=45950 failed=0 rate=4191.07/s
+[GRAPH] 46953/99909 built=4 cached=46949 failed=0 rate=4190.15/s
+[GRAPH] 47952/99909 built=4 cached=47948 failed=0 rate=4191.86/s
+[GRAPH] 48951/99909 built=4 cached=48947 failed=0 rate=4189.49/s
+[GRAPH] 49950/99909 built=4 cached=49946 failed=0 rate=4190.35/s
+[GRAPH] 50949/99909 built=4 cached=50945 failed=0 rate=4194.78/s
+[GRAPH] 51948/99909 built=4 cached=51944 failed=0 rate=4200.92/s
+[GRAPH] 52947/99909 built=4 cached=52943 failed=0 rate=4206.24/s
+[GRAPH] 53946/99909 built=5 cached=53941 failed=0 rate=4209.55/s
+[GRAPH] 54945/99909 built=5 cached=54940 failed=0 rate=4214.82/s
+[GRAPH] 55944/99909 built=5 cached=55939 failed=0 rate=4220.48/s
+[GRAPH] 56943/99909 built=5 cached=56938 failed=0 rate=4226.39/s
+[GRAPH] 57942/99909 built=5 cached=57937 failed=0 rate=4229.80/s
+[GRAPH] 58941/99909 built=5 cached=58936 failed=0 rate=4222.41/s
+[GRAPH] 59940/99909 built=5 cached=59935 failed=0 rate=4226.38/s
+[GRAPH] 60939/99909 built=5 cached=60934 failed=0 rate=4230.89/s
+[GRAPH] 61938/99909 built=5 cached=61933 failed=0 rate=4232.43/s
+[GRAPH] 62937/99909 built=5 cached=62932 failed=0 rate=4235.90/s
+[GRAPH] 63936/99909 built=5 cached=63931 failed=0 rate=4237.25/s
+[GRAPH] 64935/99909 built=5 cached=64930 failed=0 rate=4232.11/s
+[GRAPH] 65934/99909 built=5 cached=65929 failed=0 rate=4233.07/s
+[GRAPH] 66933/99909 built=5 cached=66928 failed=0 rate=4231.05/s
+[GRAPH] 67932/99909 built=5 cached=67927 failed=0 rate=4235.01/s
+[GRAPH] 68931/99909 built=5 cached=68926 failed=0 rate=4230.62/s
+[GRAPH] 69930/99909 built=5 cached=69925 failed=0 rate=4233.91/s
+[GRAPH] 70929/99909 built=5 cached=70924 failed=0 rate=4235.32/s
+[GRAPH] 71928/99909 built=5 cached=71923 failed=0 rate=4236.76/s
+[GRAPH] 72927/99909 built=5 cached=72922 failed=0 rate=4239.77/s
+[GRAPH] 73926/99909 built=5 cached=73921 failed=0 rate=4237.05/s
+[GRAPH] 74925/99909 built=6 cached=74919 failed=0 rate=4232.72/s
+[GRAPH] 75924/99909 built=6 cached=75918 failed=0 rate=4230.16/s
+[GRAPH] 76923/99909 built=7 cached=76916 failed=0 rate=4227.10/s
+[GRAPH] 77922/99909 built=7 cached=77915 failed=0 rate=4229.93/s
+[GRAPH] 78921/99909 built=7 cached=78914 failed=0 rate=4231.23/s
+[GRAPH] 79920/99909 built=7 cached=79913 failed=0 rate=4231.51/s
+[GRAPH] 80919/99909 built=7 cached=80912 failed=0 rate=4236.54/s
+[GRAPH] 81918/99909 built=7 cached=81911 failed=0 rate=4236.37/s
+[GRAPH] 82917/99909 built=7 cached=82910 failed=0 rate=4236.89/s
+[GRAPH] 83916/99909 built=7 cached=83909 failed=0 rate=4238.29/s
+[GRAPH] 84915/99909 built=7 cached=84908 failed=0 rate=4239.91/s
+[GRAPH] 85914/99909 built=7 cached=85907 failed=0 rate=4241.78/s
+[GRAPH] 86913/99909 built=7 cached=86906 failed=0 rate=4243.17/s
+[GRAPH] 87912/99909 built=7 cached=87905 failed=0 rate=4245.51/s
+[GRAPH] 88911/99909 built=7 cached=88904 failed=0 rate=4243.01/s
+[GRAPH] 89910/99909 built=7 cached=89903 failed=0 rate=4238.16/s
+[GRAPH] 90909/99909 built=7 cached=90902 failed=0 rate=4236.00/s
+[GRAPH] 91908/99909 built=7 cached=91901 failed=0 rate=4236.30/s
+[GRAPH] 92907/99909 built=7 cached=92900 failed=0 rate=4234.23/s
+[GRAPH] 93906/99909 built=9 cached=93897 failed=0 rate=4235.32/s
+[GRAPH] 94905/99909 built=9 cached=94896 failed=0 rate=4235.85/s
+[GRAPH] 95904/99909 built=10 cached=95894 failed=0 rate=4238.21/s
+[GRAPH] 96903/99909 built=10 cached=96893 failed=0 rate=4240.59/s
+[GRAPH] 97902/99909 built=10 cached=97892 failed=0 rate=4242.81/s
+[GRAPH] 98901/99909 built=10 cached=98891 failed=0 rate=4245.93/s
+[GRAPH] 99900/99909 built=10 cached=99890 failed=0 rate=4247.90/s
+[GRAPH] 99909/99909 built=10 cached=99899 failed=0 rate=4247.98/s
+[GRAPH] manifest=/root/autodl-tmp/SMTgazer2/.cache/sibyl_graphs/SyGuS/manifest.json
+[PHASE] sibyl_gnn_train
++ /root/autodl-tmp/SMTgazer2/.venv/bin/python -u /root/autodl-tmp/SMTgazer2/sibyl/train_gnn.py --data /root/autodl-tmp/SMTgazer2/.cache/sibyl_graphs/SyGuS --labels /root/autodl-tmp/SMTgazer2/sibyl/data/SyGuS_GNN_Labels.json --output /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/checkpoints/SyGuS_gnn_seed0.pt --metrics /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/checkpoints/SyGuS_gnn_seed0.metrics.json --device cuda:0 --epochs 25 --batch-size 8 --workers 4 --seed 0
+{"epoch": 0, "learning_rate": 0.001, "peak_allocated_mib": 2628.61083984375, "peak_reserved_mib": 8598.0, "train": {"duration_seconds": 158.10493739694357, "loss": 0.03364687996610175, "samples": 17982, "samples_per_second": 113.73458853377733, "selected_solver_mean_par2": 6.964600654775319, "selected_solver_solved_rate": 0.9971082193304416, "top1_accuracy": 0.48782115448782115}, "validation": {"duration_seconds": 6.78375268727541, "loss": 0.02751778031105513, "samples": 1998, "samples_per_second": 294.5272465117631, "selected_solver_mean_par2": 3.623285609654508, "selected_solver_solved_rate": 0.9984984984984985, "top1_accuracy": 0.924924924924925}}
+{"epoch": 1, "learning_rate": 0.001, "peak_allocated_mib": 2670.74853515625, "peak_reserved_mib": 9394.0, "train": {"duration_seconds": 159.17467887699604, "loss": 0.029315594158745153, "samples": 17982, "samples_per_second": 112.97022947912328, "selected_solver_mean_par2": 3.360817655411764, "selected_solver_solved_rate": 0.9986097208319431, "top1_accuracy": 0.5156267378489601}, "validation": {"duration_seconds": 6.658073663711548, "loss": 0.04401444499049936, "samples": 1998, "samples_per_second": 300.0867970100249, "selected_solver_mean_par2": 1.2364506501335282, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.031031031031031032}}
+{"epoch": 2, "learning_rate": 0.001, "peak_allocated_mib": 2572.83740234375, "peak_reserved_mib": 9394.0, "train": {"duration_seconds": 159.03884418308735, "loss": 0.028789305569113674, "samples": 17982, "samples_per_second": 113.0667170801299, "selected_solver_mean_par2": 2.560179946178218, "selected_solver_solved_rate": 0.9989433878322768, "top1_accuracy": 0.5254143031920809}, "validation": {"duration_seconds": 6.5342645943164825, "loss": 0.03739947306590753, "samples": 1998, "samples_per_second": 305.7727417003996, "selected_solver_mean_par2": 3.6345845787255495, "selected_solver_solved_rate": 0.9984984984984985, "top1_accuracy": 0.2082082082082082}}
+{"epoch": 3, "learning_rate": 0.001, "peak_allocated_mib": 2781.0703125, "peak_reserved_mib": 10218.0, "train": {"duration_seconds": 157.4671334400773, "loss": 0.02866590849463961, "samples": 17982, "samples_per_second": 114.19525844637852, "selected_solver_mean_par2": 2.02640214265669, "selected_solver_solved_rate": 0.9991658324991658, "top1_accuracy": 0.5268045823601379}, "validation": {"duration_seconds": 6.665176548063755, "loss": 0.03309139279877996, "samples": 1998, "samples_per_second": 299.7670032582141, "selected_solver_mean_par2": 1.2324863430765178, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.2952952952952953}}
+{"epoch": 4, "learning_rate": 0.0005, "peak_allocated_mib": 2759.05322265625, "peak_reserved_mib": 10218.0, "train": {"duration_seconds": 156.65657705813646, "loss": 0.02860659626350362, "samples": 17982, "samples_per_second": 114.78611583174539, "selected_solver_mean_par2": 0.9591447449901547, "selected_solver_solved_rate": 0.9996107218329441, "top1_accuracy": 0.531420309198087}, "validation": {"duration_seconds": 6.592569213360548, "loss": 0.03560073122576073, "samples": 1998, "samples_per_second": 303.0684904984902, "selected_solver_mean_par2": 3.636536606469073, "selected_solver_solved_rate": 0.9984984984984985, "top1_accuracy": 0.18268268268268267}}
+{"epoch": 5, "learning_rate": 0.0005, "peak_allocated_mib": 2694.7880859375, "peak_reserved_mib": 10218.0, "train": {"duration_seconds": 158.41657903417945, "loss": 0.02831929994136105, "samples": 17982, "samples_per_second": 113.51084658961271, "selected_solver_mean_par2": 0.9589531560757941, "selected_solver_solved_rate": 0.9996107218329441, "top1_accuracy": 0.5397619842064286}, "validation": {"duration_seconds": 6.697986241430044, "loss": 0.035645021962839085, "samples": 1998, "samples_per_second": 298.29861214725634, "selected_solver_mean_par2": 1.231894368531408, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.24174174174174173}}
+{"epoch": 6, "learning_rate": 0.0005, "peak_allocated_mib": 2842.47900390625, "peak_reserved_mib": 11490.0, "train": {"duration_seconds": 156.96448273584247, "loss": 0.028336555225251133, "samples": 17982, "samples_per_second": 114.56094835327899, "selected_solver_mean_par2": 0.4254297612063208, "selected_solver_solved_rate": 0.9998331664998331, "top1_accuracy": 0.5402068735402069}, "validation": {"duration_seconds": 6.707715947180986, "loss": 0.02867293731310406, "samples": 1998, "samples_per_second": 297.8659227273463, "selected_solver_mean_par2": 1.2253846901770051, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.6801801801801802}}
+{"epoch": 7, "learning_rate": 0.0005, "peak_allocated_mib": 2607.39208984375, "peak_reserved_mib": 11490.0, "train": {"duration_seconds": 158.40558749064803, "loss": 0.02819927840759519, "samples": 17982, "samples_per_second": 113.51872294947691, "selected_solver_mean_par2": 0.6922667900846361, "selected_solver_solved_rate": 0.9997219441663886, "top1_accuracy": 0.5429318207095984}, "validation": {"duration_seconds": 6.705727316439152, "loss": 0.03991726980553017, "samples": 1998, "samples_per_second": 297.9542569680525, "selected_solver_mean_par2": 1.2349972869824242, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.056056056056056056}}
+{"epoch": 8, "learning_rate": 0.00025, "peak_allocated_mib": 2704.341796875, "peak_reserved_mib": 11490.0, "train": {"duration_seconds": 157.05388545244932, "loss": 0.028284097153653247, "samples": 17982, "samples_per_second": 114.49573468492348, "selected_solver_mean_par2": 0.4250962634359275, "selected_solver_solved_rate": 0.9998331664998331, "top1_accuracy": 0.5370926482037593}, "validation": {"duration_seconds": 6.6373171247541904, "loss": 0.033898987040087744, "samples": 1998, "samples_per_second": 301.02524294769097, "selected_solver_mean_par2": 1.230857592624229, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.3188188188188188}}
+{"epoch": 9, "learning_rate": 0.00025, "peak_allocated_mib": 2641.46875, "peak_reserved_mib": 11490.0, "train": {"duration_seconds": 156.19580760225654, "loss": 0.028015866764192255, "samples": 17982, "samples_per_second": 115.12472886461913, "selected_solver_mean_par2": 0.024723880024865714, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5339228117005895}, "validation": {"duration_seconds": 6.721862114965916, "loss": 0.03290673405178137, "samples": 1998, "samples_per_second": 297.2390634957455, "selected_solver_mean_par2": 1.2311855183468685, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.3263263263263263}}
+{"epoch": 10, "learning_rate": 0.00025, "peak_allocated_mib": 2498.40625, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 158.60320266708732, "loss": 0.02801309677717014, "samples": 17982, "samples_per_second": 113.37728178002014, "selected_solver_mean_par2": 0.024794296886158286, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5378155933711489}, "validation": {"duration_seconds": 6.653765309602022, "loss": 0.033531962917209626, "samples": 1998, "samples_per_second": 300.2811050634284, "selected_solver_mean_par2": 1.2308212941637389, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.3153153153153153}}
+{"epoch": 11, "learning_rate": 0.00025, "peak_allocated_mib": 2541.4267578125, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 157.2388450987637, "loss": 0.02807814354797304, "samples": 17982, "samples_per_second": 114.36105364870417, "selected_solver_mean_par2": 0.024901719659669634, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5410966522077634}, "validation": {"duration_seconds": 6.723727896809578, "loss": 0.03398853105057527, "samples": 1998, "samples_per_second": 297.15658198304766, "selected_solver_mean_par2": 1.2311393578011949, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.3028028028028028}}
+{"epoch": 12, "learning_rate": 0.000125, "peak_allocated_mib": 2556.60693359375, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 156.85809836164117, "loss": 0.028007925192115635, "samples": 17982, "samples_per_second": 114.63864593425038, "selected_solver_mean_par2": 0.02507582846160938, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5497719942164386}, "validation": {"duration_seconds": 6.701617527753115, "loss": 0.03577693084159771, "samples": 1998, "samples_per_second": 298.1369783825726, "selected_solver_mean_par2": 1.2328219942308523, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.2107107107107107}}
+{"epoch": 13, "learning_rate": 0.000125, "peak_allocated_mib": 2491.28564453125, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 158.88986521586776, "loss": 0.028172524641056126, "samples": 17982, "samples_per_second": 113.17273115921935, "selected_solver_mean_par2": 0.02524332988382831, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5433767100433767}, "validation": {"duration_seconds": 6.6634669080376625, "loss": 0.03420732566551701, "samples": 1998, "samples_per_second": 299.8439142227833, "selected_solver_mean_par2": 1.2311356012020502, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.3033033033033033}}
+{"epoch": 14, "learning_rate": 0.000125, "peak_allocated_mib": 2540.9111328125, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 156.80758018419147, "loss": 0.027955015784620695, "samples": 17982, "samples_per_second": 114.67557868616898, "selected_solver_mean_par2": 0.02452047003722936, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.541430319208097}, "validation": {"duration_seconds": 6.626981131732464, "loss": 0.0355161363566602, "samples": 1998, "samples_per_second": 301.4947470474646, "selected_solver_mean_par2": 1.2322678143555696, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.23523523523523523}}
+{"epoch": 15, "learning_rate": 0.000125, "peak_allocated_mib": 2340.982421875, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 159.89385061711073, "loss": 0.027928099383637037, "samples": 17982, "samples_per_second": 112.46211114810498, "selected_solver_mean_par2": 0.02457693098240349, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5331998665331998}, "validation": {"duration_seconds": 6.577947497367859, "loss": 0.029372008166856714, "samples": 1998, "samples_per_second": 303.7421628554336, "selected_solver_mean_par2": 1.2279314632425915, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.5155155155155156}}
+{"epoch": 16, "learning_rate": 6.25e-05, "peak_allocated_mib": 2599.74072265625, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 156.99383403360844, "loss": 0.027632824722426796, "samples": 17982, "samples_per_second": 114.53953023499321, "selected_solver_mean_par2": 0.024566962965310926, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.552441330219108}, "validation": {"duration_seconds": 6.729272648692131, "loss": 0.0340523239396684, "samples": 1998, "samples_per_second": 296.91173241261396, "selected_solver_mean_par2": 1.230941399230852, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.30680680680680683}}
+{"epoch": 17, "learning_rate": 6.25e-05, "peak_allocated_mib": 2629.7275390625, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 157.73378471285105, "loss": 0.027847605107219342, "samples": 17982, "samples_per_second": 114.00220968979863, "selected_solver_mean_par2": 0.024799085865129737, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5446001557112669}, "validation": {"duration_seconds": 6.633126229047775, "loss": 0.03500089863570662, "samples": 1998, "samples_per_second": 301.2154346242292, "selected_solver_mean_par2": 1.2315090379050306, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.2707707707707708}}
+{"epoch": 18, "learning_rate": 6.25e-05, "peak_allocated_mib": 2417.5654296875, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 158.35868344083428, "loss": 0.02763785304984975, "samples": 17982, "samples_per_second": 113.55234591046853, "selected_solver_mean_par2": 0.024870211020494883, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5549438327216105}, "validation": {"duration_seconds": 6.702095542103052, "loss": 0.03355424166717627, "samples": 1998, "samples_per_second": 298.11571432373927, "selected_solver_mean_par2": 1.2309818930021517, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.3103103103103103}}
+{"epoch": 19, "learning_rate": 6.25e-05, "peak_allocated_mib": 2697.10791015625, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 158.05116752535105, "loss": 0.02821325515588005, "samples": 17982, "samples_per_second": 113.77328166282435, "selected_solver_mean_par2": 0.024982384537685278, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5389834278723168}, "validation": {"duration_seconds": 6.6534173004329205, "loss": 0.0326981520200068, "samples": 1998, "samples_per_second": 300.29681136488995, "selected_solver_mean_par2": 1.2302992109048951, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.3533533533533533}}
+{"epoch": 20, "learning_rate": 3.125e-05, "peak_allocated_mib": 2566.02392578125, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 156.80099864676595, "loss": 0.028052373723267927, "samples": 17982, "samples_per_second": 114.6803920586566, "selected_solver_mean_par2": 0.024907024817781762, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5471026582137694}, "validation": {"duration_seconds": 6.643268428742886, "loss": 0.03407470289957117, "samples": 1998, "samples_per_second": 300.75557256657237, "selected_solver_mean_par2": 1.231152681743836, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.2907907907907908}}
+{"epoch": 21, "learning_rate": 3.125e-05, "peak_allocated_mib": 2529.8720703125, "peak_reserved_mib": 11492.0, "train": {"duration_seconds": 157.52220349758863, "loss": 0.027995260711831838, "samples": 17982, "samples_per_second": 114.15533557004407, "selected_solver_mean_par2": 0.024890943239666227, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5446557668779891}, "validation": {"duration_seconds": 6.60981660336256, "loss": 0.03345058482695926, "samples": 1998, "samples_per_second": 302.2776757502732, "selected_solver_mean_par2": 1.2300877624505513, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.35835835835835833}}
+{"epoch": 22, "learning_rate": 3.125e-05, "peak_allocated_mib": 2929.2578125, "peak_reserved_mib": 12800.0, "train": {"duration_seconds": 159.02038893848658, "loss": 0.027658976150419512, "samples": 17982, "samples_per_second": 113.07983913280408, "selected_solver_mean_par2": 0.02475258807937901, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5529974418863308}, "validation": {"duration_seconds": 6.5174780413508415, "loss": 0.03507411559937416, "samples": 1998, "samples_per_second": 306.56029637897876, "selected_solver_mean_par2": 1.231475212559984, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.26376376376376376}}
+{"epoch": 23, "learning_rate": 3.125e-05, "peak_allocated_mib": 2805.205078125, "peak_reserved_mib": 12800.0, "train": {"duration_seconds": 157.53644079342484, "loss": 0.027573909952336644, "samples": 17982, "samples_per_second": 114.14501882506997, "selected_solver_mean_par2": 0.024904129968069642, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5525525525525525}, "validation": {"duration_seconds": 6.615366522222757, "loss": 0.03513991158526462, "samples": 1998, "samples_per_second": 302.02408185369507, "selected_solver_mean_par2": 1.2317424055274662, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.25075075075075076}}
+{"epoch": 24, "learning_rate": 1.5625e-05, "peak_allocated_mib": 2867.9814453125, "peak_reserved_mib": 12800.0, "train": {"duration_seconds": 158.44057653844357, "loss": 0.027510486424937572, "samples": 17982, "samples_per_second": 113.49365416905624, "selected_solver_mean_par2": 0.02504879626028133, "selected_solver_solved_rate": 1.0, "top1_accuracy": 0.5502724947169392}, "validation": {"duration_seconds": 6.614202909171581, "loss": 0.03320553283709604, "samples": 1998, "samples_per_second": 302.077215869727, "selected_solver_mean_par2": 1.2304339818171672, "selected_solver_solved_rate": 0.9994994994994995, "top1_accuracy": 0.34534534534534533}}
+[OK] checkpoint=/root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/checkpoints/SyGuS_gnn_seed0.pt
+[OK] training_metrics=/root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/checkpoints/SyGuS_gnn_seed0.metrics.json
+[OK] using newly trained Sibyl checkpoint: /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/checkpoints/SyGuS_gnn_seed0.pt
+[OK] train query coverage: 19996/19996
+[OK] test query coverage: 79981/79981
+[INFO] checkpoint sha256: d0d2ca484cbbd1ba3bb4223e77b5dfc1ace069bae85bbf05641a62959e561a6f
+[PHASE] sibyl_feature_extract
++ /root/autodl-tmp/SMTgazer2/.venv/bin/python -u machfea/mach_run_inference.py --dataset SyGuS --labels /root/autodl-tmp/SMTgazer2/SMTgazer/data/SyGuSLabels.json --query-root /root/autodl-tmp/SMTgazer2/sibyl/data/SyGuS --sibyl-root /root/autodl-tmp/SMTgazer2/sibyl --model /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/checkpoints/SyGuS_gnn_seed0.pt --device cuda:0 --output-dir /root/autodl-tmp/SMTgazer2/SMTgazer/tmp/feature_stage_SyGuS_i0zu2dca --graph-cache /root/autodl-tmp/SMTgazer2/.cache/sibyl_graphs/SyGuS --batch-size 8 --workers 4
+train: 16 feature extractions failed
+  Inv_Track/XC/72_conf1_Query20.smt2: graph cache file not found
+  Inv_Track/From2018/fib_18_Query8.smt2: graph cache file not found
+  Inv_Track/XC/125_conf5_Query14.smt2: graph cache file not found
+  Inv_Track/XC/16_conf5_Query13.smt2: graph cache file not found
+  Inv_Track/XC/36_conf5_Query18.smt2: graph cache file not found
+  Inv_Track/XC/128_conf5_Query15.smt2: graph cache file not found
+  Inv_Track/XC/111_conf5_Query16.smt2: graph cache file not found
+  Inv_Track/XC/10_conf5_Query13.smt2: graph cache file not found
+  Inv_Track/From2018/jmbl_cegar1_vars_Query4.smt2: graph cache file not found
+  Inv_Track/XC/88_conf5_Query17.smt2: graph cache file not found
+  Inv_Track/XC/13_conf5_Query15.smt2: graph cache file not found
+  Inv_Track/From2018/gcnr_tacas08_Query3.smt2: graph cache file not found
+  Inv_Track/XC/131.c_Query11.smt2: graph cache file not found
+  Inv_Track/XC/62_conf5_Query18.smt2: graph cache file not found
+  Inv_Track/XC/71.c_Query11.smt2: graph cache file not found
+  Inv_Track/XC/17_conf5_Query17.smt2: graph cache file not found
+train: extracted=19980, skipped=4, failed=16
+test: 52 feature extractions failed
+  Inv_Track/XC/38_conf1_Query10.smt2: graph cache file not found
+  Inv_Track/XC/62_conf1_Query6.smt2: graph cache file not found
+  Inv_Track/XC/38_conf5_Query14.smt2: graph cache file not found
+  Inv_Track/From2018/fib_32_Query6.smt2: graph cache file not found
+  Inv_Track/XC/78_conf1_Query12.smt2: graph cache file not found
+  Inv_Track/XC/108_conf5_Query10.smt2: graph cache file not found
+  Inv_Track/XC/63_conf5_Query15.smt2: graph cache file not found
+  Inv_Track/XC/10_conf1_Query13.smt2: graph cache file not found
+  Inv_Track/XC/43_conf1_Query7.smt2: graph cache file not found
+  Inv_Track/XC/63_conf5_Query11.smt2: graph cache file not found
+  Inv_Track/XC/130_conf5_Query7.smt2: graph cache file not found
+  Inv_Track/XC/107_conf5_Query19.smt2: graph cache file not found
+  Inv_Track/XC/72_conf1_Query14.smt2: graph cache file not found
+  Inv_Track/XC/28_conf5_Query6.smt2: graph cache file not found
+  Inv_Track/XC/120_conf1_Query12.smt2: graph cache file not found
+  Inv_Track/XC/101_conf5_Query15.smt2: graph cache file not found
+  Inv_Track/XC/52_conf5_Query14.smt2: graph cache file not found
+  Inv_Track/XC/71_conf5_Query14.smt2: graph cache file not found
+  Inv_Track/XC/67_conf5_Query12.smt2: graph cache file not found
+  Inv_Track/XC/99_conf1_Query10.smt2: graph cache file not found
+  Inv_Track/XC/62_conf5_Query17.smt2: graph cache file not found
+  Inv_Track/XC/108_conf1_Query6.smt2: graph cache file not found
+  Inv_Track/XC/39_conf5_Query15.smt2: graph cache file not found
+  Inv_Track/XC/37_conf5_Query18.smt2: graph cache file not found
+  Inv_Track/XC/47_conf5_Query14.smt2: graph cache file not found
+  Inv_Track/XC/40_conf5_Query14.smt2: graph cache file not found
+  Inv_Track/XC/39_conf1_Query11.smt2: graph cache file not found
+  Inv_Track/XC/28_conf5_Query9.smt2: graph cache file not found
+  Inv_Track/XC/11.c_Query11.smt2: graph cache file not found
+  Inv_Track/XC/71_conf5_Query15.smt2: graph cache file not found
+  Inv_Track/XC/131_conf1_Query13.smt2: graph cache file not found
+  Inv_Track/XC/1_conf5_Query15.smt2: graph cache file not found
+  Inv_Track/XC/49_conf5_Query7.smt2: graph cache file not found
+  Inv_Track/XC/118_conf5_Query7.smt2: graph cache file not found
+  Inv_Track/From2018/brett_Query4.smt2: graph cache file not found
+  Inv_Track/XC/15_conf5_Query16.smt2: graph cache file not found
+  Inv_Track/From2018/jmbl_trex3_vars_Query6.smt2: graph cache file not found
+  Inv_Track/XC/106_conf1_Query9.smt2: graph cache file not found
+  Inv_Track/XC/79_conf5_Query11.smt2: graph cache file not found
+  Inv_Track/XC/99_conf5_Query6.smt2: graph cache file not found
+  Inv_Track/XC/87_conf5_Query16.smt2: graph cache file not found
+  Inv_Track/XC/4_conf5_Query11.smt2: graph cache file not found
+  Inv_Track/From2018/jmbl_cegar1_Query4.smt2: graph cache file not found
+  Inv_Track/XC/27_conf1_Query6.smt2: graph cache file not found
+  Inv_Track/XC/100_conf1_Query6.smt2: graph cache file not found
+  Inv_Track/XC/72_conf5_Query6.smt2: graph cache file not found
+  Inv_Track/XC/16_conf1_Query14.smt2: graph cache file not found
+  Inv_Track/XC/79_conf5_Query16.smt2: graph cache file not found
+  Inv_Track/From2018/fib_17n_Query9.smt2: graph cache file not found
+  Inv_Track/XC/94_conf5_Query17.smt2: graph cache file not found
+  Inv_Track/XC/87.c_Query11.smt2: graph cache file not found
+  Inv_Track/XC/26_conf5_Query22.smt2: graph cache file not found
+test: extracted=79929, skipped=19, failed=52
+[OK] staged train features: 19980/19996
+[OK] staged test features: 79929/79981
+[OK] installed /root/autodl-tmp/SMTgazer2/SMTgazer/machfea/infer_result/SyGuS_train_feature.json
+[OK] installed /root/autodl-tmp/SMTgazer2/SMTgazer/machfea/infer_result/SyGuS_test_feature.json
+[OK] experiment stage completed
++ /root/autodl-tmp/SMTgazer2/.venv/bin/python -B /root/autodl-tmp/SMTgazer2/SMTgazer/run_experiment.py --dataset SyGuS --device cuda:0 --overwrite --allow-partial-features --stage portfolio --seeds 0 
+[PHASE] portfolio
+[OK] train features: 19980/19996
+[OK] test features: 79929/79981
++ /root/autodl-tmp/SMTgazer2/.venv/bin/python -u SMTportfolio.py train -dataset SyGuS -solverdict machfea/SyGuS_solver.json -seed 0 -cluster_num 3
+Read over
+(19980, 201)
+['cvc5', 'UltimateEliminator+MathSAT-5.6.6', 'smtinterpol-2.5-823-g881e8631', 'veriT', 'z3-4.8.11']
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 0 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 0 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 0 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 0 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 0 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+[125.64064539999998, 64.76929249999999, 476358.54931599996, 7106400.0205261, 475322.5292906]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 2 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 3 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 4 -cluster 0 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 2 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 3 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 4 -cluster 0 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 2 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 3 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 4 -cluster 0 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 2 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 3 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 4 -cluster 0 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 2 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 3 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 4 -cluster 0 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[1]
+[64.76929249999999, 64.76929249999999, 64.76929249999999, 64.76929249999999]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 3 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 4 -cluster 0 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[1, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 3 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 4 -cluster 0 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[1, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 3 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 4 -cluster 0 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[1, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 3 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 4 -cluster 0 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[1, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 3 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 4 -cluster 0 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[1, 0]
+[64.76929249999999, 64.76929249999999, 64.76929249999999]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 3 -cluster 0 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 4 -cluster 0 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[1, 0, 2]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 3 -cluster 0 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 4 -cluster 0 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[1, 0, 2]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 3 -cluster 0 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 4 -cluster 0 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[1, 0, 2]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 3 -cluster 0 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 4 -cluster 0 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[1, 0, 2]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 3 -cluster 0 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 4 -cluster 0 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[1, 0, 2]
+[64.76929249999999, 64.76929249999999]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -s2 0 -s3 2 -s4 3 -cluster 0 -dataset SyGuS -si -1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+['cvc5', 'UltimateEliminator+MathSAT-5.6.6', 'smtinterpol-2.5-823-g881e8631', 'veriT', 'z3-4.8.11']
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 1 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 1 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 1 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 1 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 1 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+[266.36678840000013, 21748.795174699982, 3292.9915049999986, 19538400.1241952, 259.6741878000001]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 1 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 1 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 1 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 1 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 1 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+[259.6741878000001, 259.6741878000001, 259.6741878000001, 259.6741878000001]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 1 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 1 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 1 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 1 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 1 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+[259.6741878000001, 259.6741878000001, 259.6741878000001]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 1 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 1 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 1 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 1 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 1 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 1 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 1 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 1 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 1 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 1 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+[259.6741878000001, 259.6741878000001]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 1 -dataset SyGuS -si -1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+['cvc5', 'UltimateEliminator+MathSAT-5.6.6', 'smtinterpol-2.5-823-g881e8631', 'veriT', 'z3-4.8.11']
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 2 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 2 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 2 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 2 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 0 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 1 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 2 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 3 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -cluster 2 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 5
+[]
+[324.6012466000002, 2579.843486800004, 3586.6546690000014, 21283200.0132239, 294.11046880000004]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 2 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 2 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 2 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 2 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 1 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 2 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 3 -cluster 2 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 4
+[4]
+[294.11046880000004, 294.11046880000004, 294.11046880000004, 294.11046880000004]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 2 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 2 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 2 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 2 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 2 -cluster 2 -dataset SyGuS -si 4python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 3 -cluster 2 -dataset SyGuS -si 4
+
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 3
+[4, 0]
+[294.11046880000004, 294.11046880000004, 294.11046880000004]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 2 -dataset SyGuS -si 0
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 2 -dataset SyGuS -si 0
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 2 -dataset SyGuS -si 1
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 2 -dataset SyGuS -si 1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 2 -dataset SyGuS -si 2
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 2 -dataset SyGuS -si 2
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 2 -dataset SyGuS -si 3
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 2 -dataset SyGuS -si 3
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 2 -dataset SyGuS -si 4
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 3 -cluster 2 -dataset SyGuS -si 4
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417'], ['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+configs len: 2
+[4, 0, 1]
+[294.11046880000004, 294.11046880000004]
+python -u portfolio_smac3.py  -seed 0 -t1 1200 -t2 0 -t3 0 -s1 4 -s2 0 -s3 1 -s4 2 -cluster 2 -dataset SyGuS -si -1
+[['334.2539259785072', '308.8233794490727', '198.3211363184784', '358.6015582539417']]
+[OK] training result /root/autodl-tmp/SMTgazer2/SMTgazer/output/train_result_SyGuS_4_3_0.json
++ /root/autodl-tmp/SMTgazer2/.venv/bin/python -u SMTportfolio.py infer -clusterPortfolio output/train_result_SyGuS_4_3_0.json -dataset SyGuS -solverdict machfea/SyGuS_solver.json -seed 0
+(79929, 201)
+79929
+79929
+[OK] test result /root/autodl-tmp/SMTgazer2/SMTgazer/output/test_result_SyGuS_0_3.json
+[OK] experiment stage completed
+[OK] Experiment completed
+[INFO] Results: /root/autodl-tmp/SMTgazer2/SMTgazer/output
+[INFO] Full log: /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/run.log
+{
+  "source": "/root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/gpu.csv",
+  "overall": {
+    "samples": 14414,
+    "duration_seconds": 15042.048,
+    "gpu_util_avg_pct": 25.03559039822395,
+    "gpu_util_p50_pct": 0.0,
+    "gpu_util_p95_pct": 87.0,
+    "gpu_util_max_pct": 100.0,
+    "gpu_active_samples_pct": 30.22061884279173,
+    "memory_util_avg_pct": 7.312820868599972,
+    "memory_used_avg_mib": 4630.835992784792,
+    "memory_used_peak_mib": 32268.0,
+    "power_draw_avg_w": 49.48522408769252,
+    "power_draw_peak_w": 144.66,
+    "estimated_energy_wh": 206.68443361389302,
+    "temperature_peak_c": 53.0,
+    "sm_clock_avg_mhz": 1221.9501873178854
+  },
+  "phases": {
+    "orchestration": {
+      "samples": 1,
+      "duration_seconds": 0.0,
+      "gpu_util_avg_pct": 1.0,
+      "gpu_util_p50_pct": 1.0,
+      "gpu_util_p95_pct": 1.0,
+      "gpu_util_max_pct": 1.0,
+      "gpu_active_samples_pct": 0.0,
+      "memory_util_avg_pct": 0.0,
+      "memory_used_avg_mib": 0.0,
+      "memory_used_peak_mib": 0.0,
+      "power_draw_avg_w": 39.36,
+      "power_draw_peak_w": 39.36,
+      "estimated_energy_wh": 0.0,
+      "temperature_peak_c": 31.0,
+      "sm_clock_avg_mhz": 1260.0
+    },
+    "sibyl_graph_build": {
+      "samples": 27,
+      "duration_seconds": 27.097,
+      "gpu_util_avg_pct": 0.0,
+      "gpu_util_p50_pct": 0.0,
+      "gpu_util_p95_pct": 0.0,
+      "gpu_util_max_pct": 0.0,
+      "gpu_active_samples_pct": 0.0,
+      "memory_util_avg_pct": 0.0,
+      "memory_used_avg_mib": 0.0,
+      "memory_used_peak_mib": 0.0,
+      "power_draw_avg_w": 40.684814814814814,
+      "power_draw_peak_w": 40.81,
+      "estimated_energy_wh": 0.30620499999999995,
+      "temperature_peak_c": 33.0,
+      "sm_clock_avg_mhz": 1380.0
+    },
+    "sibyl_gnn_train": {
+      "samples": 3953,
+      "duration_seconds": 4117.177,
+      "gpu_util_avg_pct": 82.17126233240577,
+      "gpu_util_p50_pct": 83.0,
+      "gpu_util_p95_pct": 88.0,
+      "gpu_util_max_pct": 94.0,
+      "gpu_active_samples_pct": 99.84821654439666,
+      "memory_util_avg_pct": 21.955476853023022,
+      "memory_used_avg_mib": 11478.256008095117,
+      "memory_used_peak_mib": 13190.0,
+      "power_draw_avg_w": 76.83672906653175,
+      "power_draw_peak_w": 122.94,
+      "estimated_energy_wh": 87.88480049722234,
+      "temperature_peak_c": 46.0,
+      "sm_clock_avg_mhz": 1379.956235770301
+    },
+    "sibyl_feature_extract": {
+      "samples": 374,
+      "duration_seconds": 388.505,
+      "gpu_util_avg_pct": 76.59358288770053,
+      "gpu_util_p50_pct": 89.0,
+      "gpu_util_p95_pct": 92.0,
+      "gpu_util_max_pct": 100.0,
+      "gpu_active_samples_pct": 85.8288770053476,
+      "memory_util_avg_pct": 49.2620320855615,
+      "memory_used_avg_mib": 24601.29411764706,
+      "memory_used_peak_mib": 32268.0,
+      "power_draw_avg_w": 115.11933155080214,
+      "power_draw_peak_w": 144.66,
+      "estimated_energy_wh": 12.443166958333329,
+      "temperature_peak_c": 53.0,
+      "sm_clock_avg_mhz": 1363.8342245989304
+    },
+    "portfolio": {
+      "samples": 10059,
+      "duration_seconds": 10505.11,
+      "gpu_util_avg_pct": 0.7349637140868873,
+      "gpu_util_p50_pct": 0.0,
+      "gpu_util_p95_pct": 4.0,
+      "gpu_util_max_pct": 99.0,
+      "gpu_active_samples_pct": 0.8748384531265533,
+      "memory_util_avg_pct": 0.019186797892434635,
+      "memory_used_avg_mib": 1210.3032110547767,
+      "memory_used_peak_mib": 2044.0,
+      "power_draw_avg_w": 36.32090168008748,
+      "power_draw_peak_w": 47.26,
+      "estimated_energy_wh": 106.00240637222188,
+      "temperature_peak_c": 40.0,
+      "sm_clock_avg_mhz": 1154.1533949696789
+    }
+  }
+}
+[OK] GPU metric summary: /root/autodl-tmp/SMTgazer2/logs/20260808_004232_39745/gpu-summary.json
